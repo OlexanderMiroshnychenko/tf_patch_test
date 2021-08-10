@@ -161,7 +161,7 @@ def multi_gpu_model(model, gpus, cpu_merge=True, cpu_relocation=False):
     num_gpus = gpus
     target_gpu_ids = range(num_gpus)
 
-  target_devices = ['/cpu:0'] + ['/gpu:%d' % i for i in target_gpu_ids]
+  target_devices = ['/cpu:0'] + ['/xla_gpu:%d' % i for i in target_gpu_ids]
   available_devices = _get_available_devices()
   available_devices = [
       _normalize_device_name(name) for name in available_devices
