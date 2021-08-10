@@ -1,4 +1,5 @@
-from distutils.core import setup
+# from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(name='xla_gpu',
       version='1.0',
@@ -6,5 +7,5 @@ setup(name='xla_gpu',
       author='test',
       author_email='test',
       url='',
-      packages=['tensorflow'],
+      packages=find_packages(),
      )
